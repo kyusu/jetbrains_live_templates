@@ -1,0 +1,34 @@
+<templateSet group="JavaScript">
+  <template name="afunc" value="function ($PARAM$) {&#10;    $END$&#10;}" description="A function" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="afunc," value="function ($PARAM$) {&#10;    $END$&#10;}," description="A function with a comma at the end" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="afunc;" value="function ($PARAM$) {&#10;    $END$&#10;};" description="A function with a semicolon ath the end" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="afunc)" value="function ($PARAM$) {&#10;    $END$&#10;});" description="A function with a closing bracket" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="conso" value="console.log($FILE$, $LINE$, '$METHOD$', arguments);" description="A log call with line number and file name" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="fileName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LINE" expression="lineNumber()" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="jsMethodName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

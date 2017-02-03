@@ -23,7 +23,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="conso" value="console.log($FILE$, $LINE$, '$METHOD$', arguments);" description="A log call with line number and file name" toReformat="false" toShortenFQNames="true">
+  <template name="conso" value="console.log('$FILE$', '$LINE$', '$METHOD$', arguments);" description="A log call with line number and file name" toReformat="false" toShortenFQNames="true">
     <variable name="FILE" expression="fileName()" defaultValue="" alwaysStopAt="true" />
     <variable name="LINE" expression="lineNumber()" defaultValue="" alwaysStopAt="true" />
     <variable name="METHOD" expression="jsMethodName()" defaultValue="" alwaysStopAt="true" />

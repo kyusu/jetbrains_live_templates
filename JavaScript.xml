@@ -31,4 +31,13 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="jsog" value="console.log('$FILE$', '$LINE$', '$METHOD$', JSON.stringify($ARG$, null, 4));" description="A log call with line number and file name and JSON stringify" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="fileName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LINE" expression="lineNumber()" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="jsMethodName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARG" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>

@@ -40,4 +40,31 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="fcomp" value="import React from 'react';&#10;&#10;const $NAME$ = ($PROPS$) =&gt; (&#10;    $END$&#10;);&#10;&#10;export default $NAME$;" description="A stateless &amp; pure React component" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPS" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="imcom" value="import $component$ from 'components/$component$';" description="Import component" toReformat="false" toShortenFQNames="true">
+    <variable name="component" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="alam" value="($PARAMS$) =&gt; $BODY$;" description="A short lambda" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="alamb" value="($PARAMS$) =&gt; {&#10;    $BODY$;&#10;}" description="A big lambda" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>

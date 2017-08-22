@@ -23,10 +23,11 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="conso" value="console.log('$FILE$', '$LINE$', '$METHOD$', arguments);" description="A log call with line number and file name" toReformat="false" toShortenFQNames="true">
+  <template name="conso" value="console.log('$FILE$', '$LINE$', '$METHOD$', $LOG_VALUE$);" description="A log call with line number and file name" toReformat="false" toShortenFQNames="true">
     <variable name="FILE" expression="fileName()" defaultValue="" alwaysStopAt="true" />
     <variable name="LINE" expression="lineNumber()" defaultValue="" alwaysStopAt="true" />
     <variable name="METHOD" expression="jsMethodName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LOG_VALUE" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -63,6 +64,11 @@
   <template name="alamb" value="($PARAMS$) =&gt; {&#10;    $BODY$;&#10;}" description="A big lambda" toReformat="false" toShortenFQNames="true">
     <variable name="PARAMS" expression="jsDefineParameter()" defaultValue="" alwaysStopAt="true" />
     <variable name="BODY" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="jsdom" value="/**&#10; * @jest-environment jsdom&#10; */" description="Add the jsdom annotiation for jest" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>

@@ -73,4 +73,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="it" value="it('$DESC$', () =&gt; {&#10;    $END$&#10;});" description="Template for a Jest test" toReformat="false" toShortenFQNames="true">
+    <variable name="DESC" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
